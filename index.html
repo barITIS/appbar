@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITSBAR</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="FAVICON/ITS.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="banner">
+        <p>Offerta speciale! Ottieni il 20% di sconto su tutti gli ordini fino al 31 maggio. Approfittane ora!</p>
+    </div>
+    <header>
+        <!-- Barra di navigazione -->
+        <img src="immagini/logo.png" class="logo" alt="logo">
+        <div class="menu-icon">
+            <i class="bx bx-menu"></i>
+        </div>
+        <ul class="navbar">
+            <li class="black"><a href="#home">HOME</a></li>
+            <li><a href="#categoria">CATEGORIE</a></li>
+            <li><a href="#service">SERVICE</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+            <li><a href="#carrello"><i class='bx bx-cart bx-tada'></i></a></li>
+        </ul>
+    </header>
+    <br><br>
+    <p align='center'><button id="pulsanteVisualizza" onclick="visualizza()">MENU PRODOTTI</button></p>
+    <section class="categoria" id="categoria" style="display:none;">
+        <div class="categoria-container">
+            <div class="box">
+                <div class="categoria-img">
+                    <img src="IMGCATEGORIA/cornetto.png" alt="">
+                </div>
+                <h2>Cornetti</h2>
+                <button id="pulsanteVisualizzaCornetti" onclick="visualizzaProdotti('cornetti')" class="btm">Visualizza
+                    Cornetti</button>
+                <table id="displayCornetti" style="display: none;"></table>
+            </div>
+            <div class="box">
+                <div class="categoria-img">
+                    <img src="IMGCATEGORIA/bevande.png" alt="">
+                </div>
+                <h2>Bevande</h2>
+                <button id="pulsanteVisualizzaBevande" onclick="visualizzaProdotti('bevande')" class="btm">Visualizza
+                    Bevande</button>
+                <table id="displayBevande" style="display: none;"></table>
+            </div>
+            <div class="box">
+                <div class="categoria-img">
+                    <img src="IMGCATEGORIA/pizza.png" alt="">
+                </div>
+                <h2>Pizze</h2>
+                <button id="pulsanteVisualizzaPizze" onclick="visualizzaProdotti('pizze')" class="btm">Visualizza
+                    Pizze</button>
+                <table id="displayPizze" style="display: none;"></table>
+            </div>
+            <div class="box">
+                <div class="categoria-img">
+                    <img src="IMGCATEGORIA/panini.png" alt="">
+                </div>
+                <h2>Panini</h2>
+                <button id="pulsanteVisualizzaPanini" onclick="visualizzaProdotti('panini')" class="btm">Visualizza
+                    Panini</button>
+                <table id="displayPanini" style="display: none;"></table>
+            </div>
+            <div class="box">
+                <div class="categoria-img">
+                    <img src="IMGCATEGORIA/caffe.png" alt="">
+                </div>
+                <h2>Caffè</h2>
+                <button id="pulsanteVisualizzaCaffe" onclick="visualizzaProdotti('caffe')" class="btm">Visualizza
+                    Caffè</button>
+                <table id="displayCaffe" style="display: none;"></table>
+            </div>
+            <div class="box">
+                <div class="categoria-img">
+                    <img src="IMGCATEGORIA/snack.png" alt="">
+                </div>
+                <h2>Snack</h2>
+                <button id="pulsanteVisualizzaSnack" onclick="visualizzaProdotti('snack')" class="btm">Visualizza
+                    Snack</button>
+                <table id="displaySnack" style="display: none;"></table>
+            </div>
+        </div>
+    </section>
+    <section class="service" id="service">
+        <h2>I Miei Servizi</h2>
+        <div class="service-img">
+            <div class="box">
+                <div class="box-img">
+                    <img src="immagini/utente.png" alt="">
+                </div>
+                <a href="#" style='color:black; font-size: 20px ;font-weight:bold'>Io</a>
+                <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam quam perspiciatis in amet
+                    incidunt consequatur</h3>
+                <p class="pu" align="center">
+                    <button id="more">
+                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                        </svg> Scoprimi
+                    </button>
+                </p>
+            </div>
+            <div class="box">
+                <div class="box-img">
+                    <img src="immagini/utenti.png" alt="">
+                </div>
+                <a href="#" style='color:black; font-size: 20px; font-weight:bold'>Community</a>
+                <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam quam perspiciatis in amet
+                    incidunt consequatur</h3>
+                <p class="pu" align="center">
+                    <button id="more">
+                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 12 13 2"></polygon>
+                        </svg> Scoprimi
+                    </button>
+                </p>
+            </div>
+            <div class="box">
+                <div class="box-img">
+                    <img src="immagini/carrello.png" alt="">
+                </div>
+                <a href="#" style='color:black; font-size: 20px;font-weight:bold'>Acquista</a>
+                <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam quam perspiciatis in amet
+                    incidunt consequatur</h3>
+                <p class="pu" align="center">
+                    <button id="more">
+                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                        </svg> Scoprimi
+                    </button>
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="carrello" id="carrello">
+        <h2>Il tuo carrello</h2>
+        <table id="carrelloTable"></table>
+        <p id="prezzoTotaleCarrello"></p>
+        <button onclick="svuotaCarrello()">Svuota Carrello</button>
+    </section>
+
+    <footer>
+        <section class="contact" id="contact">
+            <div class="social">
+                <a href="#"><i class='bx bxl-youtube'></i></a>
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+            </div>
+            <div class="links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Termini di Utilizzo</a>
+                <a href="#">La nostra azienda</a>
+            </div>
+            <p>&copy; ITSBAR</p>
+        </section>
+    </footer>
+
+    <script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const navbar = document.querySelector('.navbar');
+
+        menuIcon.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+            menuIcon.classList.toggle('active');
+        });
+
+        function visualizza() {
+            var pulsante = document.getElementById("pulsanteVisualizza");
+            if (document.getElementById("categoria").style.display === "none") {
+                document.getElementById("categoria").style.display = "block";
+                pulsante.innerHTML = "NASCONDI MENU";
+            } else {
+                document.getElementById("categoria").style.display = "none";
+                pulsante.innerHTML = "MENU PRODOTTI";
+            }
+        }
+
+        function visualizzaProdotti(categoria) {
+            var tableId = "display" + categoria.charAt(0).toUpperCase() + categoria.slice(1);
+            var table = document.getElementById(tableId);
+            var buttonId = "pulsanteVisualizza" + categoria.charAt(0).toUpperCase() + categoria.slice(1);
+            var button = document.getElementById(buttonId);
+
+            var prodottiRealistic = []; // Definisci i prodotti reali per ogni categoria
+
+            // Inserisci i prodotti reali per ogni categoria
+            if (categoria === "cornetti") {
+                prodottiRealistic = [
+                    { nome: "Cornetto al Cioccolato", descrizione: "Delizioso cornetto ripieno di crema al cioccolato", prezzo: 1.50, quantita: 20 },
+                    { nome: "Cornetto alla Crema", descrizione: "Cornetto classico con crema pasticciera", prezzo: 1.20, quantita: 15 },
+                    { nome: "Cornetto alla Marmellata", descrizione: "Cornetto con gustosa marmellata di fragole", prezzo: 1.20, quantita: 10 }
+                ];
+            } else if (categoria === "bevande") {
+                prodottiRealistic = [
+                    { nome: "Acqua Naturale", descrizione: "Bottiglia d'acqua naturale", prezzo: 0.50, quantita: 30 },
+                    { nome: "Coca Cola", descrizione: "Bottiglia di Coca Cola 33cl", prezzo: 1.20, quantita: 20 },
+                    { nome: "Aranciata", descrizione: "Bottiglia di aranciata 33cl", prezzo: 1.00, quantita: 25 }
+                ];
+            } else if (categoria === "pizze") {
+                prodottiRealistic = [
+                    { nome: "Pizza Margherita", descrizione: "Pizza con pomodoro, mozzarella e basilico", prezzo: 5.50, quantita: 15 },
+                    { nome: "Pizza Prosciutto Funghi", descrizione: "Pizza con pomodoro, mozzarella, prosciutto cotto e funghi", prezzo: 6.50, quantita: 10 },
+                    { nome: "Pizza Quattro Stagioni", descrizione: "Pizza divisa in quattro parti con ingredienti diversi", prezzo: 7.00, quantita: 12 }
+                ];
+            } else if (categoria === "panini") {
+                prodottiRealistic = [
+                    { nome: "Panino al Salame", descrizione: "Panino con salame, formaggio e insalata", prezzo: 3.50, quantita: 20 },
+                    { nome: "Panino Vegetariano", descrizione: "Panino con verdure grigliate e formaggio", prezzo: 4.00, quantita: 18 },
+                    { nome: "Panino al Tonno", descrizione: "Panino con tonno, cipolla e maionese", prezzo: 4.50, quantita: 15 }
+                ];
+            } else if (categoria === "caffe") {
+                prodottiRealistic = [
+                    { nome: "Espresso", descrizione: "Caffè espresso", prezzo: 1.00, quantita: 25 },
+                    { nome: "Cappuccino", descrizione: "Caffè con latte montato a vapore", prezzo: 1.50, quantita: 20 },
+                    { nome: "Macchiato", descrizione: "Caffè macchiato con un po' di latte caldo", prezzo: 1.20, quantita: 22 }
+                ];
+            } else if (categoria === "snack") {
+                prodottiRealistic = [
+                    { nome: "Patatine", descrizione: "Bustina di patatine salate", prezzo: 0.80, quantita: 30 },
+                    { nome: "Pretzel", descrizione: "Snack a forma di pretzel", prezzo: 1.00, quantita: 25 },
+                    { nome: "Popcorn", descrizione: "Bustina di popcorn al burro", prezzo: 1.50, quantita: 20 }
+                ];
+            }
+
+            if (table.style.display === "block") {
+                table.style.display = "none";
+                table.innerHTML = '';
+                button.innerHTML = "Visualizza " + categoria.charAt(0).toUpperCase() + categoria.slice(1);
+            } else {
+                var headerRow = document.createElement("tr");
+                var headers = ["Nome", "Descrizione", "Prezzo", "Quantità", "Aggiungi"];
+                headers.forEach(headerText => {
+                    var th = document.createElement("th");
+                    th.textContent = headerText;
+                    headerRow.appendChild(th);
+                });
+                table.appendChild(headerRow);
+
+                prodottiRealistic.forEach(element => {
+                    var riga = document.createElement("tr");
+                    var col1 = document.createElement("td");
+                    var col2 = document.createElement("td");
+                    var col3 = document.createElement("td");
+                    var col4 = document.createElement("td");
+                    var col5 = document.createElement("td");
+                    var inputQuantita = document.createElement("input");
+                    var aggiungiAlCarrello = document.createElement("button");
+                    aggiungiAlCarrello.textContent = "Aggiungi";
+                    aggiungiAlCarrello.style.fontSize = "10px"; // Riduci la dimensione del testo
+                    aggiungiAlCarrello.style.padding = "3px 6px"; // Riduci il padding del pulsante
+
+                    col1.textContent = element.nome;
+                    col2.textContent = element.descrizione;
+                    col3.textContent = element.prezzo.toFixed(2) + "€";
+                    col4.textContent = element.quantita;
+                    inputQuantita.type = "number";
+                    inputQuantita.min = "1";
+                    inputQuantita.max = element.quantita;
+                    col5.appendChild(inputQuantita);
+                    col5.appendChild(aggiungiAlCarrello);
+                    aggiungiAlCarrello.onclick = function () { aggiungiProdottoAlCarrello(element.nome, element.prezzo, inputQuantita.value, element.quantita) };
+
+                    riga.appendChild(col1);
+                    riga.appendChild(col2);
+                    riga.appendChild(col3);
+                    riga.appendChild(col4);
+                    riga.appendChild(col5);
+
+                    table.appendChild(riga);
+                });
+
+                table.style.display = "block";
+                button.innerHTML = "Nascondi " + categoria.charAt(0).toUpperCase() + categoria.slice(1);
+            }
+        }
+
+        function aggiungiProdottoAlCarrello(nome, prezzoUnitario, quantita, quantitaDisponibile) {
+            var carrello = JSON.parse(localStorage.getItem("carrello")) || [];
+            var prodottoPresente = false;
+
+            for (var i = 0; i < carrello.length; i++) {
+                if (carrello[i].nome === nome) {
+                    var nuovaQuantita = carrello[i].quantita + parseInt(quantita);
+                    if (nuovaQuantita > quantitaDisponibile) {
+                        alert("Non puoi aggiungere più prodotti di quanti siano disponibili.");
+                        return;
+                    }
+                    carrello[i].quantita = nuovaQuantita;
+                    carrello[i].prezzoTotale = (carrello[i].prezzoTotale + parseFloat(prezzoUnitario) * parseInt(quantita)).toFixed(2);
+                    prodottoPresente = true;
+                }
+            }
+
+            if (!prodottoPresente) {
+                carrello.push({ nome: nome, quantita: parseInt(quantita), prezzoUnitario: prezzoUnitario, prezzoTotale: (parseFloat(prezzoUnitario) * parseInt(quantita)).toFixed(2) });
+            }
+
+            localStorage.setItem("carrello", JSON.stringify(carrello));
+            alert("Prodotto aggiunto al carrello!");
+            visualizzaCarrello();
+        }
+
+        function visualizzaCarrello() {
+            var carrello = JSON.parse(localStorage.getItem("carrello")) || [];
+            var table = document.getElementById("carrelloTable");
+            var prezzoTotaleCarrello = document.getElementById("prezzoTotaleCarrello");
+            table.innerHTML = '';
+            prezzoTotaleCarrello.innerHTML = '';
+
+            var headerRow = document.createElement("tr");
+            var headers = ["Nome", "Qnt", "Prezzo", "Prezzo tot"];
+            headers.forEach(headerText => {
+                var th = document.createElement("th");
+                th.textContent = headerText;
+                headerRow.appendChild(th);
+            });
+            table.appendChild(headerRow);
+
+            var prezzoTotale = 0;
+
+            carrello.forEach(element => {
+                var riga = document.createElement("tr");
+                var col1 = document.createElement("td");
+                var col2 = document.createElement("td");
+                var col3 = document.createElement("td");
+                var col4 = document.createElement("td");
+
+                col1.textContent = element.nome;
+                col2.textContent = element.quantita;
+                col3.textContent = element.prezzoUnitario.toFixed(2) + "€";
+                col4.textContent = element.prezzoTotale + "€";
+
+                riga.appendChild(col1);
+                riga.appendChild(col2);
+                riga.appendChild(col3);
+                riga.appendChild(col4);
+
+                table.appendChild(riga);
+
+                prezzoTotale += parseFloat(element.prezzoTotale);
+            });
+
+            prezzoTotaleCarrello.textContent = "Prezzo totale: " + prezzoTotale.toFixed(2) + "€";
+        }
+
+        function svuotaCarrello() {
+            localStorage.removeItem("carrello");
+            visualizzaCarrello();
+        }
+
+        visualizzaCarrello(); // Visualizza il carrello all'avvio della pagina
+
+        window.addEventListener('load', (event) => {
+            visualizzaCarrello(); // Visualizza il carrello all'avvio della pagina
+            setTimeout(aggiungiProdottoAutomatico, 15000); // Aggiungi automaticamente il prodotto dopo 15 secondi
+        });
+
+        function aggiungiProdottoAutomatico() {
+            aggiungiProdottoAlCarrello("Espresso", 1.00, 3, 3); // Aggiungi il cornetto al cioccolato al carrello con quantità 3
+        }
+
+    </script>
+</body>
+
+</html>
